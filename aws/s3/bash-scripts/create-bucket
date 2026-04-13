@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+BUCKET_NAME=$1
+
+aws s3api create-bucket \
+--bucket $BUCKET_NAME \
+--region us-east-1 \
+--query Location \
+--output text
