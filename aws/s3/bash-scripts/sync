@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This syncs your current folder to the bucket
+BUCKET_NAME=$1
+
+aws s3 sync . s3://$BUCKET_NAME
