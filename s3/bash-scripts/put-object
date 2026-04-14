@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+echo "== put object"
+BUCKET_NAME=$1
+# This creates a dummy file and uploads it
+echo "Hello from my printing press" > test_file.txt
+aws s3 cp test_file.txt s3://$BUCKET_NAME/
